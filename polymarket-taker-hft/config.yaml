@@ -1,0 +1,28 @@
+runtime:
+  rollover_poll_seconds: 5
+
+market:
+  gamma_base: "https://gamma-api.polymarket.com"
+  schedule_lead_seconds: 3600
+
+feeds:
+  binance_symbol: "BTCUSDT"
+  binance_rest: "https://api.binance.com"
+  binance_ws: "wss://stream.binance.com:9443/ws"
+  binance_emit_on_price_change_only: true
+  poly_ws: "wss://ws-subscriptions-clob.polymarket.com/ws"
+  poly_emit_on_price_change_only: true
+  poly_channel: "market"
+  ping_interval: 20
+  ping_timeout: 10
+  reconnect_delay: 1
+
+strategy:
+  df: 3
+  delta_threshold: 0.005
+  order_price: 0.99
+  order_size: 2
+  mock_latency_ms: 100
+
+logging:
+  events_csv: "market_data_test.csv"
